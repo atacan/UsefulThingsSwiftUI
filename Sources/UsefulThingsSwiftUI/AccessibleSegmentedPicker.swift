@@ -93,7 +93,7 @@ public struct AccessibleSegmentedPicker<Item: Hashable>: View {
 
 @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 #Preview("Accessible Segmented Picker", traits: .sizeThatFitsLayout) {
-    VStack {
+    ScrollView {
         AccessibleSegmentedPickerPreview()
         
         Text("Accessible Segmented Picker — Accessibility 1")

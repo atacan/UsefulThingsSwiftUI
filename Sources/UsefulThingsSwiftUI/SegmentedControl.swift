@@ -79,11 +79,60 @@ struct SegmentedControl<Item: Hashable>: UIViewRepresentable {
 
 
 @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
-#Preview(traits: .sizeThatFitsLayout) {
-    SegmentedControl(
-        items: ["Hashable", "This", "Is", "A", "Preview"],
-        selection: .constant("This"),
-        title: {_ in "This"}
-    )
+#Preview("Segmented Control", traits: .sizeThatFitsLayout) {
+    VStack {
+        SegmentedControlPreview()
+
+        Text("Segmented Control — Accessibility 1")
+
+        SegmentedControlPreview()
+            .dynamicTypeSize(.accessibility1)
+            .padding()
+
+        Text("Segmented Control — Accessibility 2")
+
+        SegmentedControlPreview()
+            .dynamicTypeSize(.accessibility2)
+            .padding()
+
+        Text("Segmented Control — Accessibility 3")
+
+        SegmentedControlPreview()
+            .dynamicTypeSize(.accessibility3)
+            .padding()
+
+        Text("Segmented Control — Accessibility 4")
+
+        SegmentedControlPreview()
+            .dynamicTypeSize(.accessibility4)
+            .padding()
+
+        Text("Segmented Control — Accessibility 5")
+
+        SegmentedControlPreview()
+            .dynamicTypeSize(.accessibility5)
+            .padding()
+    }
+    .padding().padding().padding()
+    .frame(width: 1200)
+}
+
+@available(iOS 15.0, *)
+private struct SegmentedControlPreview: View {
+    private enum Version: String, CaseIterable {
+        case standard = "Standard Version"
+        case extended = "Extended Version"
+        case enterprise = "Enterprise Version"
+    }
+
+    @State private var selection = Version.standard
+
+    var body: some View {
+        SegmentedControl(
+            items: Version.allCases,
+            selection: $selection,
+            title: \.rawValue
+        )
+    }
 }
 #endif
