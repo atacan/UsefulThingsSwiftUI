@@ -2,6 +2,7 @@
 
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fatacan%2FUsefulThingsSwiftUI%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/atacan/UsefulThingsSwiftUI)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fatacan%2FUsefulThingsSwiftUI%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/atacan/UsefulThingsSwiftUI)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/atacan/UsefulThingsSwiftUI)
 
 A collection of SwiftUI components, view modifiers, and utilities for building macOS and iOS apps. Fills in gaps that SwiftUI doesn't cover out of the box — native popup buttons, async modal presentation, floating panels, text editors that don't update on every keystroke, and more.
 
